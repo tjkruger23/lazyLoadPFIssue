@@ -12,7 +12,6 @@ import javax.faces.view.ViewScoped;
  */
 
 @ManagedBean(name = "lazyLoadBean")
-@ViewScoped
 public class LazyLoadBean {
     
     private String option;
