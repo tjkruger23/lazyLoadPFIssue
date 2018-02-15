@@ -22,7 +22,15 @@
                               itemValue="" />
                 <f:selectItems value="#{lazyLoadBean.options}"/>
             </p:selectOneMenu>
+            
+            <p:commandButton value="Submit" update="display" oncomplete="PF('dlg').show()" icon="ui-icon-check" />
+ 
+            <p:dialog header="Values" modal="true" showEffect="bounce" widgetVar="dlg" resizable="false">
+                <p:panelGrid columns="2" id="display" columnClasses="label,value">
+                    <h:outputText value="Lazy:" />
+                    <h:outputText value="#{lazyLoadBean.option}" />
+                </p:panelGrid>
+            </p:dialog>
         </h:form>
-
     </h:body>
 </html>
